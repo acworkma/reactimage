@@ -11,8 +11,8 @@ const FileUpload = () => {
   const uploadFile = async () => {
     if (!file) return;
 
-    const blobServiceClient = new BlobServiceClient('<Your Azure Storage Connection String>');
-    const containerClient = blobServiceClient.getContainerClient('<Your Container Name>');
+    const blobServiceClient = new BlobServiceClient(process.env.REACT_APP_AZURE_STORAGE_CONNECTION_STRING);
+    const containerClient = blobServiceClient.getContainerClient(process.env.REACT_APP_AZURE_STORAGE_CONTAINER);
     const blockBlobClient = containerClient.getBlockBlobClient(file.name);
 
     await blockBlobClient.uploadData(file);

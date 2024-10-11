@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import FileUpload from './FileUpload';
 
+//const connectionString = process.env.REACT_APP_AZURE_STORAGE_CONNECTION_STRING;
+//const containerClient = process.env.REACT_APP_AZURE_STORAGE_CONTAINER; 
 
 function App() {
   return (
